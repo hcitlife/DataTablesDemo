@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/ico" href="imgs/favicon.ico">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=2.0">
+    <link rel="stylesheet" type="text/css" href="css/jquery.dataTables.min.css"/>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+    <title>DataTables examples - Examples index</title>
+</head>
+
+<body>
+<h1>最简单实例- sAjaxSource </h1>
+
+<hr>
+
+<table id="example" class="display" style="width: 100%"></table>
+
+<script type="text/javascript">
+    $('#example').DataTable({
+        "processing": true,
+        "serverSide": true,
+        "sAjaxSource": "data/dept4.json",
+        "columns": [
+            {"title": "部门编号"},
+            {"title": "部门名称"},
+            {"title": "部门地址", "className": "center"},
+            {
+                "title": "备注",
+                "title": "Grade",
+                "className": "center",
+                "render": function (data, type, row, meta) {
+                    var sReturn = data;
+                    if (sReturn == "A") {
+                        sReturn = "<b>A</b>";
+                    }
+                    return sReturn;
+                }
+            }
+        ]
+    });
+</script>
+
+</body>
+</html>

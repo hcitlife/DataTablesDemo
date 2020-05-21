@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" type="image/ico" href="imgs/favicon.ico">
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=2.0">
+	<link rel="stylesheet" type="text/css" href="css/jquery.dataTables.min.css" />
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+	<title>DataTables examples - Examples index</title>
+</head>
+
+<body>
+	<h1>最简单实例-ajax对象</h1>
+	<hr>
+
+	<table id="example" class="display" style="width: 100%"></table>
+
+	<script type="text/javascript">
+		$(function () {
+            $('#example').DataTable({
+                "ajax" : "data/dept2.json",
+                "columns": [  //不带title时表格在显示时就没有标题了
+                    { "title": "部门编号","data": "deptno" },
+                    { "title": "部门名称", "data": "dname" },
+                    { "title": "部门地址","data": "loc" }
+                ]
+            });
+        });
+	</script>
+
+</body>
+</html>

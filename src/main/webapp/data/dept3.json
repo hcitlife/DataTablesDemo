@@ -1,0 +1,24 @@
+{
+  "draw": 1,
+  "recordsTotal": 57,
+  "recordsFiltered": 57,
+  "data": [
+    [
+      11,
+      "ACCOUNTING",
+      "NEW YORK"
+    ],[
+      12,
+      "RESEARCH",
+      "DALLAS"
+    ],[
+      "13",
+      "SALES",
+      "CHICAGO"
+    ],[
+      "14",
+      "OPERATIONS",
+      "BOSTON"
+    ]
+  ]
+}

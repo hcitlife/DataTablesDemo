@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/ico" href="imgs/favicon.ico">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=2.0">
+    <link rel="stylesheet" type="text/css" href="css/jquery.dataTables.min.css"/>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+    <title>DataTables examples - Examples index</title>
+</head>
+
+<body>
+<h1>最简单实例-排序</h1>
+
+<hr>
+
+<table id="example" class="display" style="width: 100%"></table>
+
+<script type="text/javascript">
+    var aaData = [
+        ["10", "ACCOUNTING", "NEW YORK", "X"],
+        ["11", "RESEARCH", "DALLAS", "C"],
+        ["12", "SALES", "CHICAGO", "A"],
+        ["13", "OPERATION", "BOSTON", "A"],
+
+        ["14", "ACCOUNTING", "NEW YORK", "A"],
+        ["15", "RESEARCH", "DALLAS", "A"],
+        ["16", "SALES", "CHICAGO", "A"],
+        ["17", "OPERATION", "BOSTON", "A"],
+
+        ["18", "ACCOUNTING", "NEW YORK", "A"],
+        ["19", "RESEARCH", "DALLAS", "A"],
+        ["20", "SALES", "CHICAGO", "A"],
+        ["21", "OPERATION", "BOSTON", "A"]
+    ];
+
+    $('#example').DataTable({
+        "aaData": aaData,
+        "order": [[2, 'asc']],
+        "columns": [
+            {"title": "部门编号", "orderable": false},
+            {"title": "部门名称"},
+            {"title": "部门地址", "className": "center"},
+            {
+                "title": "备注",
+                "className": "center",
+                "render": function (data, type, row, meta) {
+                    var sReturn = data;
+                    if (sReturn == "A") {
+                        sReturn = "<b>A</b>";
+                    }//end if
+                    return sReturn;
+                }
+            }
+        ]
+    });
+</script>
+
+</body>
+</html>

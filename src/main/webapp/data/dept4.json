@@ -1,0 +1,21 @@
+{
+  "sEcho": 3,
+  "iTotalRecords": 12,
+  "iTotalDisplayRecords": 12,
+  "data": [
+    ["10", "ACCOUNTING", "NEW YORK", "X"],
+    ["11", "RESEARCH", "DALLAS", "C"],
+    ["12", "SALES", "CHICAGO", "A"],
+    ["13", "OPERATION", "BOSTON", "A"],
+
+    ["14", "ACCOUNTING", "NEW YORK", "A"],
+    ["15", "RESEARCH", "DALLAS", "A"],
+    ["16", "SALES", "CHICAGO", "A"],
+    ["17", "OPERATION", "BOSTON", "A"],
+
+    ["18", "ACCOUNTING", "NEW YORK", "A"],
+    ["19", "RESEARCH", "DALLAS", "A"],
+    ["20", "SALES", "CHICAGO", "A"],
+    ["21", "OPERATION", "BOSTON", "A"]
+  ]
+}

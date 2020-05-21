@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/ico" href="imgs/favicon.ico">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=2.0">
+    <link rel="stylesheet" type="text/css" href="css/jquery.dataTables.min.css"/>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+    <title>DataTables examples - Examples index</title>
+</head>
+
+<body>
+    <h1>最简单实例</h1>
+    <hr>
+    <table id="myTable" class="table table-condensed">
+        <thead>
+            <tr>
+                <th>部门编号</th>
+                <th>部门名称</th>
+                <th>部门地址</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>10</td>
+            <td>ACCOUNTING</td>
+            <td>NEW YORK</td>
+        </tr>
+        <tr>
+            <td>20</td>
+            <td>RESEARCH</td>
+            <td>DALLAS</td>
+        </tr>
+        <tr>
+            <td>30</td>
+            <td>SALES</td>
+            <td>CHICAGO</td>
+        </tr>
+        <tr>
+            <td>40</td>
+            <td>OPERATIONS</td>
+            <td>BOSTON</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <script type="text/javascript">
+        //初始化Datatables
+        $(document).ready(function () {
+            $('#myTable').DataTable({
+                // 开启搜索框
+                "searching": true,
+                // 允许分页
+                "paging": false,
+                //左下角信息
+                "info": false,
+                "bPaginate": false,  //显示翻页按钮 是否分页。
+                "bLengthChange": false, //是否允许用户自定义每页显示条数
+                "aLengthMenu": [5, 10, 15],
+
+                "bProcessing": true,                    //当datatable获取数据时候是否显示正在处理提示信息。
+                "sPaginationType": 'full_numbers',      //分页样式
+                //支持国际化
+                "language": {
+                    "sProcessing": "正在加载中......",
+                    "sLengthMenu": "显示_MENU_",
+                    "sZeroRecords": "无记录",
+                    "sEmptyTable": "表中无数据存在！",
+                    "search": "在表格中搜索",
+                    "sInfoEmpty": "没有数据",
+                    "sInfoFiltered": "数据表中共为 _TOTAL_ 条记录",
+                    "sInfo": "当前显示 _START_ 到 _END_ 条，共 _MAX_  条记录",
+                    "oPaginate": {
+                        "sFirst": " 首页 ",
+                        "sPrevious": " 上一页 ",
+                        "sNext": " 下一页 ",
+                        "sLast": " 末页 "
+                    }
+                },
+                "columnDefs": [
+                    {
+                        "orderable": false,
+                        "targets": [0, 2]//targets指定列禁止排序功能
+                    }
+                ]
+            });
+        });
+    </script>
+</body>
+</html>

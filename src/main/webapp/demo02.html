@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/ico" href="imgs/favicon.ico">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=2.0">
+
+    <link rel="stylesheet" type="text/css" href="css/jquery.dataTables.min.css"/>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+
+    <title>DataTables examples - Examples index</title>
+</head>
+
+<body>
+    <h1>最简单实例-数组</h1>
+    <hr>
+    <table class="display" id="example"></table>
+    <script type="text/javascript">
+        var dataSet = [
+            ['11', 'ACCOUNTING', 'NEW YORK'],
+            ['12', 'RESEARCH', 'DALLAS'],
+            ['13', 'SALES', 'CHICAGO'],
+            ['14', 'OPERATION', 'BOSTON'],
+            ['15', 'ACCOUNTING', 'NEW YORK'],
+            ['16', 'RESEARCH', 'DALLAS'],
+            ['17', 'SALES', 'CHICAGO'],
+            ['18', 'OPERATION', 'BOSTON'],
+            ['19', 'ACCOUNTING', 'NEW YORK'],
+            ['20', 'RESEARCH', 'DALLAS'],
+            ['21', 'SALES', 'CHICAGO'],
+            ['22', 'OPERATION', 'BOSTON'],
+            ['23', 'ACCOUNTING', 'NEW YORK'],
+            ['24', 'RESEARCH', 'DALLAS'],
+            ['25', 'SALES', 'CHICAGO'],
+            ['26', 'OPERATION', 'BOSTON'],
+            ['27', 'ACCOUNTING', 'NEW YORK'],
+            ['28', 'RESEARCH', 'DALLAS'],
+            ['29', 'SALES', 'CHICAGO'],
+            ['30', 'OPERATION', 'BOSTON'],
+            ['41', 'ACCOUNTING', 'NEW YORK'],
+            ['42', 'RESEARCH', 'DALLAS'],
+            ['43', 'SALES', 'CHICAGO'],
+            ['44', 'OPERATION', 'BOSTON'],
+            ['45', 'ACCOUNTING', 'NEW YORK'],
+            ['46', 'RESEARCH', 'DALLAS'],
+            ['47', 'SALES', 'CHICAGO'],
+            ['48', 'OPERATION', 'BOSTON'],
+            ['49', 'ACCOUNTING', 'NEW YORK'],
+            ['50', 'RESEARCH', 'DALLAS'],
+            ['51', 'SALES', 'CHICAGO'],
+            ['52', 'OPERATION', 'BOSTON'],
+            ['53', 'ACCOUNTING', 'NEW YORK'],
+            ['54', 'RESEARCH', 'DALLAS'],
+            ['55', 'SALES', 'CHICAGO'],
+            ['56', 'OPERATION', 'BOSTON'],
+            ['57', 'ACCOUNTING', 'NEW YORK'],
+            ['58', 'RESEARCH', 'DALLAS'],
+            ['59', 'SALES', 'CHICAGO'],
+            ['60', 'OPERATION', 'BOSTON']
+        ];
+
+        $('#example').dataTable({
+            "data": dataSet,
+            "columns": [
+                {"title": "部门编号"},
+                {"title": "部门名称"},
+                {"title": "部门地址"}
+            ]
+        });
+    </script>
+</body>
+</html>
